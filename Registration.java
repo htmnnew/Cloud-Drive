@@ -77,7 +77,7 @@ public class Registration extends HttpServlet {
 		Connection c = null;		
         try {
         	String url = "jdbc:mysql://cs3.calstatela.edu/cs3220stu91";																																												
-            c = DriverManager.getConnection( url, "cs3220stu91", "Xy7DRTV*"  );
+            c = DriverManager.getConnection( url, "username", "password"  );
             Statement stmt = c.createStatement();
             
             ResultSet rs = stmt.executeQuery( "SELECT name from users WHERE name='" + name + "'");
